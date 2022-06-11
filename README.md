@@ -18,3 +18,15 @@ Now you can clone a repo from GitHub using a command like this...
 ```bash
 git clone http://localhost:8888/cwiederspan/nginx-proxy.git
 ```
+
+## Build and Test
+
+```bash
+
+docker build -t cdwms.azurecr.io/mynginx:port8080exposed .
+
+docker run -d -p 8080:8080 cdwms.azurecr.io/mynginx:port8080exposed
+
+docker push cdwms.azurecr.io/mynginx:port8080exposed
+
+```
